@@ -18,6 +18,7 @@ enum STATE{
 
 func _ready():
 	change_state(STATE.IDLE)
+	camera.zoom = Vector2(2, 2)
 
 func _process(delta: float) -> void:
 		# Detectar si está en el rango para montarse al mecha
@@ -65,6 +66,7 @@ func mount_mecha():
 		camera.get_parent().remove_child(camera)
 		mecha.add_child(camera)  # Mueve la cámara al mecha
 		camera.position = Vector2.ZERO  # Centra la cámara en el mecha
+		camera.zoom = Vector2(1, 1)
 		visible = false  # Oculta al tripulante
 		set_physics_process(false)  # Desactiva física para el tripulante
 		mecha.is_controlled = true
@@ -74,6 +76,7 @@ func dismount_mecha():
 		camera.get_parent().remove_child(camera)
 		add_child(camera)  # Retorna la cámara al tripulante
 		camera.position = Vector2.ZERO
+		camera.zoom = Vector2(2, 2)
 		visible = true  # Muestra al tripulante
 		set_physics_process(true)  # Reactiva la física para el tripulante
 		mecha.is_controlled = false
