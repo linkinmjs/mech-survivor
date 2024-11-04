@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://doo7gdtp4nxx1"]
+
+[ext_resource type="Texture2D" uid="uid://dr3m5nxs6fjvo" path="res://textures/dirt_full_new.png" id="1_ykme1"]
+[ext_resource type="PackedScene" uid="uid://uqyo7pxraoht" path="res://scenes/tripulante.tscn" id="2_vglfg"]
+
+[node name="World" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("1_ykme1")
+region_enabled = true
+region_rect = Rect2(-4000, -4000, 4000, 4000)
+
+[node name="Tripulante" parent="." instance=ExtResource("2_vglfg")]
+scale = Vector2(2, 2)
