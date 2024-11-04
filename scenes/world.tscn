@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://doo7gdtp4nxx1"]
+[gd_scene load_steps=4 format=3 uid="uid://doo7gdtp4nxx1"]
 
 [ext_resource type="Texture2D" uid="uid://dr3m5nxs6fjvo" path="res://textures/dirt_full_new.png" id="1_ykme1"]
+[ext_resource type="PackedScene" uid="uid://bb840cyerx5w1" path="res://scenes/tower_mecha.tscn" id="2_spgdw"]
 [ext_resource type="PackedScene" uid="uid://uqyo7pxraoht" path="res://scenes/tripulante.tscn" id="2_vglfg"]
 
 [node name="World" type="Node2D"]
@@ -11,5 +12,7 @@ texture = ExtResource("1_ykme1")
 region_enabled = true
 region_rect = Rect2(-4000, -4000, 4000, 4000)
 
+[node name="TowerMecha" parent="." instance=ExtResource("2_spgdw")]
+
 [node name="Tripulante" parent="." instance=ExtResource("2_vglfg")]
-scale = Vector2(2, 2)
+position = Vector2(71, 5)
