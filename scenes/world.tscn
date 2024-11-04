@@ -15,4 +15,4 @@ region_rect = Rect2(-4000, -4000, 4000, 4000)
 [node name="TowerMecha" parent="." instance=ExtResource("2_spgdw")]
 
 [node name="Tripulante" parent="." instance=ExtResource("2_vglfg")]
-position = Vector2(71, 5)
+position = Vector2(112, 35)
